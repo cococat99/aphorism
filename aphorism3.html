@@ -1,0 +1,2640 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aphorism Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.2/jquery.min.js"> 
+      </script>
+
+</head>
+
+
+
+<style>
+
+hr {
+  height: 1px;
+  background-color: black;
+}
+
+.updown { border-left: 1px solid black; 
+    width: 0.1px; 
+    height: 101%; 
+    position: absolute;
+    left: 50%;
+    top: 0;
+}
+
+.title {
+    font-size: 1.4em;
+    font-family: 'roboto', sans-serif;
+    position:  absolute;
+    top: 15px;
+    left: 19.5%;
+    line-height: 13px;
+}
+
+.text1 {
+    font-size: 1.4em;
+    font-family: 'roboto', sans-serif;
+    text-align: 10%;
+    line-height: 13px;
+    width: 50%;
+    position: relative;
+    left: 0.5%;
+}
+.text1-2 {
+    font-family: 'roboto', sans-serif;
+    text-align: right;
+    position: absolute;
+    right: 51%;
+
+      border: none;
+  background-color: inherit;
+  font-size: 22px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 20px;
+}
+
+.text2 {
+    font-size: 1.4em;
+    font-family: 'roboto', sans-serif;
+    text-align: 10%;
+    line-height: 13px;
+    width: 50%;
+    position: relative;
+    left: 0.5%;
+}
+
+.text3 {
+    font-size: 1.4em;
+    font-family: 'roboto', sans-serif;
+    text-align: 10%;
+    line-height: 13px;
+    width: 50%;
+    position: relative;
+    left: 0.5%;
+}
+
+
+.btn {
+  border: none;
+  background-color: inherit;
+  font-size: 22px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 20px;
+}
+
+/* On mouse-over */
+.btn:hover {color: #eee;}
+
+
+
+.a {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.a1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.a2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+
+.b {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.b1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.b2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.c {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.c1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.c2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.d {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.d1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.d2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.e {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.e1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.e2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.f {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.f1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.f2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.g {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.g1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.g2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.h {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.h1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.h2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+
+.i {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+.i1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+.i2 {
+     position: absolute;
+    top:59%;
+    right: 14%;
+}
+
+
+
+.j {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.j1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.j2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.k {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.k1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.k2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.l {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.l1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.l2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.m {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.m1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.m2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.n {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.n1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.n2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.o {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.o1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.o2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+
+.p {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.p1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.p2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+
+.q {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.q1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.q2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.r {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.r1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.r2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.s {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+.s1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+
+.s2 {
+     position: absolute;
+    top:63%;
+    right: 12%;
+}
+
+
+.w {
+    position: absolute;
+    top: 8%;
+    right: 13%;
+}
+.w1 {
+    position: absolute;
+    top:60%;
+    right: 6%;
+}
+.w2 {
+     position: absolute;
+    top:66%;
+    right: 12%;
+}
+
+
+
+
+.z1 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+.z2 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+.z3 {
+     position: absolute;
+    top: 8%;
+    right: 13%;
+}
+
+
+
+.x1 {
+    position: fixed;
+    top: 0%;
+    right: 0%;
+}
+
+
+</style>
+
+
+
+
+<body>
+
+    <div id="gradient" />
+
+    <div class="updown"></div>
+
+
+
+
+
+    <div class="title">Aphorism Simulator</div>
+
+    <br><br>
+
+
+    <a class="btn text1">공자</a> <div class="text1-2">BC 551 ~ BC 479</div>
+<!--앞날을 결정짓고자 하면 옛 것을 공부하라.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <div class="btn text2">마르쿠스 툴리우스 키케로</div> <div class="text1-2">BC 106 ~ BC 43</div>
+<!--삶이 있는 한 희망은 있다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <a class="btn text3">니콜로 마키아벨리</a> <div class="text1-2">1469 ~ 1527</div>
+<!--강인한 의지는 어려움과 시련을 초월한다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <a class="btn text4">아이작 뉴턴</a> <div class="text1-2">1643 ~ 1727</div>
+<!--천재란 곧 인내다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <a class="btn text5">벤자민 프랭클린</a> <div class="text1-2">1706 ~ 1790</div>
+<!--오늘 할 수 있는 일을 내일로 미루지 마라.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">    
+
+    <a class="btn text6">조지 고든 바이런</a> <div class="text1-2">1788 ~ 1824</div>
+<!--역경은 진리에 도달하는 첫 번째 길이다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <a class="btn text7">빅토르 위고</a> <div class="text1-2">1802 ~ 1885</div>
+<!--강인함이 부족한 게 아니라 의지가 부족한 것이다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">    
+
+    <a class="btn text8">랄프 왈도 에머슨</a> <div class="text1-2">1803 ~ 1882</div>
+<!--남을 모방하지 말고 자신의 생각을 고집하라.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">        
+
+    <a class="btn text9">에이브러햄 링컨</a> <div class="text1-2">1809 ~ 1865</div>
+
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">   
+
+    <div class="btn text10">앤드류 카네기</div> <div class="text1-2">1835 ~ 1919</div>
+<!--행복의 비결은 포기해야 할 것을 포기하는 것이다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <a class="btn text11">마크 트웨인</a> <div class="text1-2">1835 ~ 1910</div>
+<!--자신이 대중과 똑같아질 때는 잠시 쉬고 고민할 때이다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">      
+
+    <a class="btn text12">프리드리히 니체</a> <div class="text1-2">1844 ~ 1900</div>
+<!--춤추는 별을 잉태하려면 반드시 스스로의 내면에 혼돈을 지녀야 한다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">     
+
+    <a class="btn text13">토머스 에디슨</a> <div class="text1-2">1847 ~ 1931</div>
+<!--성공은 열심히 기다리는 자에게 찾아온다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <div class="btn text14">오스카 와일드</div> <div class="text1-2">1854 ~ 1900</div>
+<!--인기 있는 사람이 되기보단 고정수입을 버는 편이 낫다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <div class="btn text15">조지 버나드 쇼</div> <div class="text1-2">1856 ~ 1950</div>
+<!--성공은 당신이 서 있는 위치가 아니라 당신이 바라보는 방향이다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;"> 
+
+    <div class="btn text17">윈스턴 처칠</div> <div class="text1-2">1874 ~ 1965</div>
+
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <a class="btn text18">데일 카네기</a> <div class="text1-2">1888 ~ 1955</div>
+<!--큰 일을 먼저 하라 작은 일은 저절로 처리될 것이다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">   
+
+    <a class="btn text19">월트 디즈니</a> <div class="text1-2">1901 ~ 1966 </div>
+<!--추구할 수 있는 용기가 있다면 우리의 모든 꿈은 이뤄질 수 있다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">     
+
+    <a class="btn text20">스티브 잡스</a> <div class="text1-2">1955 ~ 2011</div>
+<!--창조란 모든 것을 연결하는 것이다.-->
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+    <a class="btn text21">커트 코베인</a> <div class="text1-2">1967 ~ 1994</div>
+
+    <hr align="left" style="border: solid 1px white; width: 49.5%;">
+
+
+
+
+
+
+
+
+
+
+
+    <a class="x1">
+    <img id="x1" src="img/x1.png" style="width:831px; height:975px;">
+    </a>
+
+     <a class="z1">
+    <img id="z1" src="img/z1.png" style="width:350px; height:350px;">
+    </a>
+
+     <a class="z2">
+    <img id="z2" src="img/z2.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="z3">
+    <img id="z3" src="img/z3.png" style="width:350px; height:350px;">
+    </a>
+
+
+
+    <a class="a">
+    <img id="a" src="img/a.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="a1">
+    <img id="a1" src="img/a1.png" style="width:600px;">
+    </a>
+
+    <a class="a2">
+    <img id="a2" src="img/a2.png" style="width:400px;">
+    </a>
+
+
+    <a class="b">
+    <img id="b" src="img/b.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="b1">
+    <img id="b1" src="img/b1.png" style="width:600px;">
+    </a>
+
+    <a class="b2">
+    <img id="b2" src="img/b2.png" style="width:400px;">
+    </a>
+
+
+    <a class="c">
+    <img id="c" src="img/c.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="c1">
+    <img id="c1" src="img/c1.png" style="width:600px;">
+    </a>
+
+    <a class="c2">
+    <img id="c2" src="img/c2.png" style="width:400px;">
+    </a>
+
+        <a class="d">
+    <img id="d" src="img/d.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="d1">
+    <img id="d1" src="img/d1.png" style="width:600px;">
+    </a>
+
+    <a class="d2">
+    <img id="d2" src="img/d2.png" style="width:400px;">
+    </a>
+
+        <a class="e">
+    <img id="e" src="img/e.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="e1">
+    <img id="e1" src="img/e1.png" style="width:600px;">
+    </a>
+
+    <a class="e2">
+    <img id="e2" src="img/e2.png" style="width:400px;">
+    </a>
+
+        <a class="f">
+    <img id="f" src="img/f.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="f1">
+    <img id="f1" src="img/f1.png" style="width:600px;">
+    </a>
+
+    <a class="f2">
+    <img id="f2" src="img/f2.png" style="width:400px;">
+    </a>
+
+        <a class="g">
+    <img id="g" src="img/g.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="g1">
+    <img id="g1" src="img/g1.png" style="width:600px;">
+    </a>
+
+    <a class="g2">
+    <img id="g2" src="img/g2.png" style="width:400px;">
+    </a>
+
+        <a class="h">
+    <img id="h" src="img/h.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="h1">
+    <img id="h1" src="img/h1.png" style="width:600px;">
+    </a>
+
+    <a class="h2">
+    <img id="h2" src="img/h2.png" style="width:400px;">
+    </a>
+
+
+
+
+    <a class="i">
+    <img id="i" src="img/i.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="i1">
+    <img id="i1" src="img/i1.png" style="width:600px;">
+    </a>
+
+    <a class="i2">
+    <img id="i2" src="img/i2.png" style="width:330px;">
+    </a>
+
+
+
+        <a class="j">
+    <img id="j" src="img/j.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="j1">
+    <img id="j1" src="img/j1.png" style="width:600px;">
+    </a>
+
+    <a class="j2">
+    <img id="j2" src="img/j2.png" style="width:400px;">
+    </a>
+
+        <a class="k">
+    <img id="k" src="img/k.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="k1">
+    <img id="k1" src="img/k1.png" style="width:600px;">
+    </a>
+
+    <a class="k2">
+    <img id="k2" src="img/k2.png" style="width:400px;">
+    </a>
+
+        <a class="l">
+    <img id="l" src="img/l.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="l1">
+    <img id="l1" src="img/l1.png" style="width:600px;">
+    </a>
+
+    <a class="l2">
+    <img id="l2" src="img/l2.png" style="width:400px;">
+    </a>
+
+        <a class="m">
+    <img id="m" src="img/m.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="m1">
+    <img id="m1" src="img/m1.png" style="width:600px;">
+    </a>
+
+    <a class="m2">
+    <img id="m2" src="img/m2.png" style="width:400px;">
+    </a>
+
+        <a class="n">
+    <img id="n" src="img/n.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="n1">
+    <img id="n1" src="img/n1.png" style="width:600px;">
+    </a>
+
+    <a class="n2">
+    <img id="n2" src="img/n2.png" style="width:400px;">
+    </a>
+
+        <a class="o">
+    <img id="o" src="img/o.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="o1">
+    <img id="o1" src="img/o1.png" style="width:600px;">
+    </a>
+
+    <a class="o2">
+    <img id="o2" src="img/o2.png" style="width:400px;">
+    </a>
+
+    <a class="p">
+    <img id="p" src="img/p.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="p1">
+    <img id="p1" src="img/p1.png" style="width:600px;">
+    </a>
+
+    <a class="p2">
+    <img id="p2" src="img/p2.png" style="width:400px;">
+    </a>
+
+
+
+
+        <a class="q">
+    <img id="q" src="img/q.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="q1">
+    <img id="q1" src="img/q1.png" style="width:600px;">
+    </a>
+
+    <a class="q2">
+    <img id="q2" src="img/q2.png" style="width:400px;">
+    </a>
+
+        <a class="r">
+    <img id="r" src="img/r.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="r1">
+    <img id="r1" src="img/r1.png" style="width:600px;">
+    </a>
+
+    <a class="r2">
+    <img id="r2" src="img/r2.png" style="width:400px;">
+    </a>
+
+        <a class="s">
+    <img id="s" src="img/s.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="s1">
+    <img id="s1" src="img/s1.png" style="width:600px;">
+    </a>
+
+    <a class="s2">
+    <img id="s2" src="img/s2.png" style="width:400px;">
+    </a>
+
+
+    <a class="w">
+    <img id="w" src="img/w.png" style="width:350px; height:350px;">
+    </a>
+
+    <a class="w1">
+    <img id="w1" src="img/w1.png" style="width:600px;">
+    </a>
+
+    <a class="w2">
+    <img id="w2" src="img/w2.png" style="width:400px;">
+    </a>
+
+
+</body>
+
+
+<script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+ 
+<script>
+    $(document).ready(function(){
+            /*웹페이지 열었을 때*/
+            $("#x1").hide();
+            $("#z1").hide();
+            $("#z2").hide();
+            $("#z3").hide();
+
+            $("#a").hide();
+            $("#a1").hide();
+            $("#a2").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+            $("#b2").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+            $("#c2").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+            $("#d2").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+            $("#e2").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+            $("#f2").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+            $("#g2").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+            $("#h2").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+            $("#i2").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+            $("#j2").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+            $("#k2").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+            $("#l2").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+            $("#m2").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+            $("#n2").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+            $("#o2").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+            $("#p2").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+            $("#q2").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+            $("#r2").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+            $("#s2").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+            $("#w2").hide();
+ 
+
+
+
+
+            /*a*/
+            $(".text1").click(function(){
+            $("#a").show();
+            $("#a1").show();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#a").hover(function(){
+                $("#x1").show();
+                $("#z1").show();
+
+                $("#a").hide();
+                $("#a1").hide();
+                $("#a2").show();
+                }, function(){
+                $("#a").show();
+                $("#a1").show();
+                $("#a2").hide();
+
+                $("#x1").hide();
+                $("#z1").hide();
+            });
+
+
+
+
+
+            /*b*/
+            $(".text2").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").show();
+            $("#b1").show();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+                $("#b").hover(function(){
+                $("#b").hide();
+                $("#b1").hide();
+                $("#x1").show();
+                $("#z2").show();
+                $("#b2").show();
+                }, function(){
+                $("#b").show();
+                $("#b1").show();
+                $("#x1").hide();
+                $("#z2").hide();
+                $("#b2").hide();
+            });
+
+
+
+
+
+           /*c*/
+            $(".text3").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").show();
+            $("#c1").show();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+                $("#c").hover(function(){
+                $("#c").hide();
+                $("#c1").hide();
+                $("#x1").show();
+                $("#z3").show();
+                $("#c2").show();
+                }, function(){
+                $("#c").show();
+                $("#c1").show();
+                $("#x1").hide();
+                $("#z3").hide();
+                $("#c2").hide();
+            });
+
+
+
+            /*d*/
+            $(".text4").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").show();
+            $("#d1").show();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#d").hover(function(){
+                $("#x1").show();
+                $("#z1").show();
+
+                $("#d").hide();
+                $("#d1").hide();
+                $("#d2").show();
+                }, function(){
+                $("#d").show();
+                $("#d1").show();
+                $("#d2").hide();
+
+                $("#x1").hide();
+                $("#z1").hide();
+            });
+
+
+
+            /*e*/
+            $(".text5").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").show();
+            $("#e1").show();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#e").hover(function(){
+                $("#x1").show();
+                $("#z2").show();
+
+                $("#e").hide();
+                $("#e1").hide();
+                $("#e2").show();
+                }, function(){
+                $("#e").show();
+                $("#e1").show();
+                $("#e2").hide();
+
+                $("#x1").hide();
+                $("#z2").hide();
+            });
+
+
+
+
+            /*f*/
+            $(".text6").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").show();
+            $("#f1").show();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#f").hover(function(){
+                $("#x1").show();
+                $("#z3").show();
+
+                $("#f").hide();
+                $("#f1").hide();
+                $("#f2").show();
+                }, function(){
+                $("#f").show();
+                $("#f1").show();
+                $("#f2").hide();
+
+                $("#x1").hide();
+                $("#z3").hide();
+            });
+
+
+
+
+            /*g*/
+            $(".text7").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").show();
+            $("#g1").show();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#g").hover(function(){
+                $("#x1").show();
+                $("#z1").show();
+
+                $("#g").hide();
+                $("#g1").hide();
+                $("#g2").show();
+                }, function(){
+                $("#g").show();
+                $("#g1").show();
+                $("#g2").hide();
+
+                $("#x1").hide();
+                $("#z1").hide();
+            });
+
+
+
+
+            /*h*/
+            $(".text8").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").show();
+            $("#h1").show();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#h").hover(function(){
+                $("#x1").show();
+                $("#z2").show();
+
+                $("#h").hide();
+                $("#h1").hide();
+                $("#h2").show();
+                }, function(){
+                $("#h").show();
+                $("#h1").show();
+                $("#h2").hide();
+
+                $("#x1").hide();
+                $("#z2").hide();
+            });
+
+
+
+
+            /*i*/
+            $(".text9").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").show();
+            $("#i1").show();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#i").hover(function(){
+                $("#x1").show();
+                $("#z2").show();
+
+                $("#i").hide();
+                $("#i1").hide();
+                $("#i2").show();
+                }, function(){
+                $("#i").show();
+                $("#i1").show();
+                $("#i2").hide();
+
+                $("#x1").hide();
+                $("#z2").hide();
+            });
+
+
+
+            /*j*/
+            $(".text10").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").show();
+            $("#j1").show();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#j").hover(function(){
+                $("#x1").show();
+                $("#z3").show();
+
+                $("#j").hide();
+                $("#j1").hide();
+                $("#j2").show();
+                }, function(){
+                $("#j").show();
+                $("#j1").show();
+                $("#j2").hide();
+
+                $("#x1").hide();
+                $("#z3").hide();
+            });            
+
+
+
+
+            /*k*/
+            $(".text11").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").show();
+            $("#k1").show();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#k").hover(function(){
+                $("#x1").show();
+                $("#z1").show();
+
+                $("#k").hide();
+                $("#k1").hide();
+                $("#k2").show();
+                }, function(){
+                $("#k").show();
+                $("#k1").show();
+                $("#k2").hide();
+
+                $("#x1").hide();
+                $("#z1").hide();
+            });
+
+
+
+
+            /*l*/
+            $(".text12").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").show();
+            $("#l1").show();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#l").hover(function(){
+                $("#x1").show();
+                $("#z2").show();
+
+                $("#l").hide();
+                $("#l1").hide();
+                $("#l2").show();
+                }, function(){
+                $("#l").show();
+                $("#l1").show();
+                $("#l2").hide();
+
+                $("#x1").hide();
+                $("#z2").hide();
+            });
+
+
+
+            /*m*/
+            $(".text13").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").show();
+            $("#m1").show();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#m").hover(function(){
+                $("#x1").show();
+                $("#z3").show();
+
+                $("#m").hide();
+                $("#m1").hide();
+                $("#m2").show();
+                }, function(){
+                $("#m").show();
+                $("#m1").show();
+                $("#m2").hide();
+
+                $("#x1").hide();
+                $("#z3").hide();
+            });
+
+
+
+            /*n*/
+            $(".text14").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").show();
+            $("#n1").show();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#n").hover(function(){
+                $("#x1").show();
+                $("#z1").show();
+
+                $("#n").hide();
+                $("#n1").hide();
+                $("#n2").show();
+                }, function(){
+                $("#n").show();
+                $("#n1").show();
+                $("#n2").hide();
+
+                $("#x1").hide();
+                $("#z1").hide();
+            });
+
+
+
+
+            /*o*/
+            $(".text15").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").show();
+            $("#o1").show();
+
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#o").hover(function(){
+                $("#x1").show();
+                $("#z2").show();
+
+                $("#o").hide();
+                $("#o1").hide();
+                $("#o2").show();
+                }, function(){
+                $("#o").show();
+                $("#o1").show();
+                $("#o2").hide();
+
+                $("#x1").hide();
+                $("#z2").hide();
+            });
+
+
+
+            /*p*/
+            $(".text17").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").show();
+            $("#p1").show();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#p").hover(function(){
+                $("#x1").show();
+                $("#z1").show();
+
+                $("#p").hide();
+                $("#p1").hide();
+                $("#p2").show();
+                }, function(){
+                $("#p").show();
+                $("#p1").show();
+                $("#p2").hide();
+
+                $("#x1").hide();
+                $("#z1").hide();
+            });
+
+
+
+            /*q*/
+            $(".text18").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").show();
+            $("#q1").show();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#q").hover(function(){
+                $("#x1").show();
+                $("#z3").show();
+
+                $("#q").hide();
+                $("#q1").hide();
+                $("#q2").show();
+                }, function(){
+                $("#q").show();
+                $("#q1").show();
+                $("#q2").hide();
+
+                $("#x1").hide();
+                $("#z3").hide();
+            });            
+
+
+
+
+            /*r*/
+            $(".text19").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").show();
+            $("#r1").show();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#r").hover(function(){
+                $("#x1").show();
+                $("#z1").show();
+
+                $("#r").hide();
+                $("#r1").hide();
+                $("#r2").show();
+                }, function(){
+                $("#r").show();
+                $("#r1").show();
+                $("#r2").hide();
+
+                $("#x1").hide();
+                $("#z1").hide();
+            });
+
+
+
+
+            /*s*/
+            $(".text20").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").show();
+            $("#s1").show();
+
+            $("#w").hide();
+            $("#w1").hide();
+        });
+
+
+            $("#s").hover(function(){
+                $("#x1").show();
+                $("#z2").show();
+
+                $("#s").hide();
+                $("#s1").hide();
+                $("#s2").show();
+                }, function(){
+                $("#s").show();
+                $("#s1").show();
+                $("#s2").hide();
+
+                $("#x1").hide();
+                $("#z2").hide();
+            });
+
+
+
+
+            /*w*/
+            $(".text21").click(function(){
+            $("#a").hide();
+            $("#a1").hide();
+
+            $("#b").hide();
+            $("#b1").hide();
+
+            $("#c").hide();
+            $("#c1").hide();
+
+            $("#d").hide();
+            $("#d1").hide();
+
+            $("#e").hide();
+            $("#e1").hide();
+
+            $("#f").hide();
+            $("#f1").hide();
+
+            $("#g").hide();
+            $("#g1").hide();
+
+            $("#h").hide();
+            $("#h1").hide();
+
+            $("#i").hide();
+            $("#i1").hide();
+
+            $("#j").hide();
+            $("#j1").hide();
+
+            $("#k").hide();
+            $("#k1").hide();
+
+            $("#l").hide();
+            $("#l1").hide();
+
+            $("#m").hide();
+            $("#m1").hide();
+
+            $("#n").hide();
+            $("#n1").hide();
+
+            $("#o").hide();
+            $("#o1").hide();
+
+            $("#p").hide();
+            $("#p1").hide();
+
+            $("#q").hide();
+            $("#q1").hide();
+
+            $("#r").hide();
+            $("#r1").hide();
+
+            $("#s").hide();
+            $("#s1").hide();
+
+            $("#w").show();
+            $("#w1").show();
+        });
+
+
+            $("#w").hover(function(){
+                $("#x1").show();
+                $("#z3").show();
+
+                $("#w").hide();
+                $("#w1").hide();
+                $("#w2").show();
+                }, function(){
+                $("#w").show();
+                $("#w1").show();
+                $("#w2").hide();
+
+                $("#x1").hide();
+                $("#z3").hide();
+            });
+
+
+        });
+</script>
+
+
+
+</html>
